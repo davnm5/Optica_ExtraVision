@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="proveedores" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="659.0" stylesheets="@../Media/estilo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.controlador">
+   <children>
+      <ImageView fitHeight="50.0" fitWidth="216.0" layoutX="229.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Media/proveedores.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="106.0" layoutY="120.0" prefHeight="32.0" prefWidth="97.0" text="NOMBRES">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombres" layoutX="216.0" layoutY="124.0" />
+      <Label layoutX="106.0" layoutY="284.0" prefHeight="32.0" prefWidth="97.0" text="DIRECCION">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="106.0" layoutY="244.0" prefHeight="32.0" prefWidth="97.0" text="TELEFONO">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="106.0" layoutY="162.0" prefHeight="32.0" prefWidth="97.0" text="APELLIDOS">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="106.0" layoutY="201.0" prefHeight="32.0" prefWidth="97.0" text="RUC">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="apellidos" layoutX="216.0" layoutY="166.0" />
+      <TextField fx:id="direccion" layoutX="216.0" layoutY="288.0" />
+      <TextField fx:id="telefono" layoutX="216.0" layoutY="248.0" />
+      <TextField fx:id="ruc" layoutX="216.0" layoutY="204.0" />
+      <Button fx:id="registrar_proveedores" layoutX="76.0" layoutY="353.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="120.0" text="REGISTRAR">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="reestablecer" layoutX="216.0" layoutY="353.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="149.0" text="REESTABLECER">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="atras_p" layoutX="7.0" layoutY="8.0" mnemonicParsing="false" onAction="#atras_Proveedores" prefHeight="25.0" prefWidth="97.0" text="ATRÁS">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
