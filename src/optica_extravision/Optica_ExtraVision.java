@@ -7,6 +7,7 @@
 package optica_extravision;
 
 
+import DB.Gestionar_Base;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -26,7 +27,8 @@ public class Optica_ExtraVision extends Application {
         stage.getIcons().add(new Image("Media/icono.png"));
         
         Parent root = FXMLLoader.load(getClass().getResource("/Componentes/principal.fxml"));
-        
+        Gestionar_Base.conectar();
+        Gestionar_Base.mostrar();
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
