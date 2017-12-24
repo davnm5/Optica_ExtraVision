@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="consultasR" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="646.0" stylesheets="@../Media/estilo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.controlador">
+   <children>
+      <ImageView fitHeight="39.0" fitWidth="227.0" layoutX="231.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Media/consultas.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="c_clientes" layoutX="248.0" layoutY="147.0" mnemonicParsing="false" onAction="#consultar_clientes" prefHeight="36.0" prefWidth="158.0" text="CLIENTES">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="c_proveedores" layoutX="248.0" layoutY="256.0" mnemonicParsing="false" text="PROVEEDORES">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="c_ventas" layoutX="248.0" layoutY="312.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="158.0" text="VENTAS">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="c_brigadas" layoutX="248.0" layoutY="365.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="158.0" text="BRIGADAS">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button layoutX="14.0" layoutY="28.0" mnemonicParsing="false" onAction="#atras_Consultas" text="ATRAS">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="248.0" layoutY="201.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="158.0" text="PRODUCTOS">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

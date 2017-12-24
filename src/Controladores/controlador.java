@@ -23,7 +23,7 @@ import javafx.scene.layout.AnchorPane;
 public class controlador implements Initializable {
     @FXML private TextField usuario;
     @FXML private PasswordField password;
-    @FXML private AnchorPane inicio,submenu,registros,clientes,proveedores;
+    @FXML private AnchorPane inicio,submenu,registros,clientes,proveedores,consultasR;
 
       
     
@@ -46,6 +46,19 @@ public class controlador implements Initializable {
         }
         
     
+        @FXML
+    private void consultas(ActionEvent event) throws IOException {
+        AnchorPane pane= FXMLLoader.load(this.getClass().getResource("/Componentes/consultas_R.fxml"));
+        this.submenu.getChildren().setAll(pane);
+    }
+    
+       @FXML
+     private void atras_Consultas(ActionEvent event) throws IOException {
+      AnchorPane pane= FXMLLoader.load(this.getClass().getResource("/Componentes/submenu.fxml"));
+      this.consultasR.getChildren().setAll(pane);
+     }
+    
+    
     @FXML
     private void b_proveedores(ActionEvent event) throws IOException {
         AnchorPane pane= FXMLLoader.load(this.getClass().getResource("/Componentes/proveedores.fxml"));
@@ -66,12 +79,15 @@ public class controlador implements Initializable {
         this.submenu.getChildren().setAll(pane);
     }
     
+   
     
     @FXML
      private void regresar(ActionEvent event) throws IOException {
       AnchorPane pane= FXMLLoader.load(this.getClass().getResource("/Componentes/principal.fxml"));
       this.submenu.getChildren().setAll(pane);
      }
+     
+     
  
      @FXML
      private void atras(ActionEvent event) throws IOException {
@@ -90,6 +106,14 @@ public class controlador implements Initializable {
       this.proveedores.getChildren().setAll(pane);
      }
      
+        
+   @FXML
+    private void consultar_clientes(ActionEvent event) throws IOException {
+        AnchorPane pane= FXMLLoader.load(this.getClass().getResource("/Componentes/consulta_clientes.fxml"));
+        this.consultasR.getChildren().setAll(pane);
+    }
+
+   
     @FXML
      private void salir(ActionEvent event) {
         System.exit(0);
