@@ -72,21 +72,7 @@ return resultado;
 
   }
     
-public static void mostrar() throws SQLException
-{
-String query="select p.nombre,d.descripcion from paciente p,diagnostico d \n" +
-"where d.descripcion=\"miopia\" and d.idDiagnostico=p.Diagnostico_idDiagnostico;";
-ResultSet rs=consultas(query);
-while(rs.next())
-{
-System.out.println(rs.getString("nombre"));
-System.out.println(rs.getString("descripcion"));
-}
-}
-    
-    
-    
-  
+
    public static void actualizar(String registro)
 {
      Statement enviar;

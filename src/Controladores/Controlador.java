@@ -5,6 +5,8 @@
  */
 package Controladores;
 
+import DB.DB_Clientes;
+import Entidades.Clientes;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,14 +22,12 @@ import javafx.scene.layout.AnchorPane;
  *
  * @author creditos
  */
-public class controlador implements Initializable {
+public class Controlador implements Initializable {
     @FXML private TextField usuario;
     @FXML private PasswordField password;
     @FXML private AnchorPane inicio,submenu,registros,clientes,proveedores,consultasR;
+    @FXML private TextField nombres,apellidos,telefono,direccion,cedula;
 
-      
-    
-    
    
     @FXML
     private void ingresar(ActionEvent event) throws IOException {
@@ -51,6 +51,16 @@ public class controlador implements Initializable {
         AnchorPane pane= FXMLLoader.load(this.getClass().getResource("/Componentes/consultas_R.fxml"));
         this.submenu.getChildren().setAll(pane);
     }
+    
+
+
+    
+@FXML
+private void registrar_clientes(){
+Clientes nuevo= new Clientes(nombres.getText(),apellidos.getText(),direccion.getText(),Integer.parseInt(cedula.getText()),Integer.parseInt(telefono.getText()));
+DB_Clientes.registrar_clientes(nuevo);
+}  
+    
     
        @FXML
      private void atras_Consultas(ActionEvent event) throws IOException {

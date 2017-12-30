@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="clientes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="659.0" stylesheets="@../Media/estilo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.controlador">
+<AnchorPane fx:id="clientes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="671.0" stylesheets="@../Media/estilo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.Controlador">
    <children>
       <ImageView fitHeight="42.0" fitWidth="180.0" layoutX="231.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -45,7 +45,7 @@
       <TextField fx:id="direccion" layoutX="216.0" layoutY="288.0" />
       <TextField fx:id="telefono" layoutX="216.0" layoutY="248.0" />
       <TextField fx:id="cedula" layoutX="216.0" layoutY="204.0" />
-      <Button fx:id="registrar_clientes" layoutX="76.0" layoutY="353.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="120.0" text="REGISTRAR">
+      <Button layoutX="76.0" layoutY="353.0" mnemonicParsing="false" onAction="#registrar_clientes" prefHeight="32.0" prefWidth="120.0" text="REGISTRAR">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
