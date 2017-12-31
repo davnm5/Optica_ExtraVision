@@ -13,11 +13,13 @@ public class Empresas {
     private String nombre;
     private String direccion;
     private String mail;
+    private int idEmpresa;
 
-    public Empresas(String nombre, String direccion, String mail) {
+    public Empresas(String nombre, String direccion, String mail,int idEmpresa) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.mail = mail;
+        this.idEmpresa=idEmpresa;
     }
 
     public String getNombre() {
@@ -43,6 +45,16 @@ public class Empresas {
     public void setMail(String mail) {
         this.mail = mail;
     }
+
+    public int getIdEmpresa() {
+        return idEmpresa;
+    }
+
+    public void setIdEmpresa(int idEmpresa) {
+        this.idEmpresa = idEmpresa;
+    }
+
+   
   
     
 }

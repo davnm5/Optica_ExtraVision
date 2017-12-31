@@ -32,9 +32,8 @@ public class DB_Empresas {
             while(r.next())
             {
             Empresas d;
-            d= new Empresas(r.getString("nombre"),r.getString("direccion"),r.getString("mail"));
+            d= new Empresas(r.getString("nombre"),r.getString("direccion"),r.getString("mail"),r.getInt("idEmpresa"));
             arreglo.add(d);
-            System.out.println("nombre:"+r.getString("nombre"));
                 
             }
             

@@ -17,25 +17,35 @@ public class Clientes {
   private SimpleStringProperty nombre;
   private SimpleStringProperty apellido;
   private SimpleStringProperty direccion;
-  private SimpleIntegerProperty telefono;
-  private SimpleIntegerProperty cedula;
-          
-  public Clientes(String a,String b,String c ,int d,int e){
+  private SimpleStringProperty telefono;
+  private SimpleStringProperty cedula;
+  private int idEmpresa;
+  private String mail;
+  
+  public Clientes(String a,String b,String c ,String d,String e,int id,String mail){
   this.nombre=new SimpleStringProperty(a);
   this.apellido=new SimpleStringProperty(b);
   this.direccion=new SimpleStringProperty(c);
-  this.cedula=new SimpleIntegerProperty(d);
-  this.telefono=new SimpleIntegerProperty(e);
+  this.cedula=new SimpleStringProperty(d);
+  this.telefono=new SimpleStringProperty(e);
+  this.idEmpresa=id;
+  this.mail=mail;
   }  
-
+     public int getIdEmpresa(){
+     return this.idEmpresa;
+     } 
+     
+     public void setIdEmpresa(int id){
+        this.idEmpresa=id;
+}
     public String getNombre() {
         return nombre.get();
     }
-    public int getCedula() {
+    public String getCedula() {
         return cedula.get();
     }
 
-    public void setCedula(int cedula) {
+    public void setCedula(String cedula) {
         this.cedula.set(cedula);
     }
     public void setNombre(String nombre) {
@@ -58,15 +68,19 @@ public class Clientes {
         this.direccion.set(direccion);
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono.get();
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono.set(telefono);
     }
-    
-  
+  public void setMail(String mail){
+  this.mail=mail;
+}
+  public String getMail(){
+  return this.mail;
+  }
     
     
 }

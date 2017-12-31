@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -8,49 +9,49 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="clientes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="671.0" stylesheets="@../Media/estilo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.Controlador">
+<AnchorPane fx:id="clientes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="665.0" stylesheets="@../Media/estilo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.Controlador_registroClientes">
    <children>
-      <ImageView fitHeight="42.0" fitWidth="180.0" layoutX="231.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="42.0" fitWidth="180.0" layoutX="252.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Media/clientes.png" />
          </image>
       </ImageView>
-      <Label layoutX="106.0" layoutY="120.0" prefHeight="32.0" prefWidth="97.0" text="NOMBRES">
+      <Label layoutX="97.0" layoutY="80.0" prefHeight="32.0" prefWidth="97.0" text="NOMBRES">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Label>
-      <TextField fx:id="nombres" layoutX="216.0" layoutY="124.0" />
-      <Label layoutX="106.0" layoutY="284.0" prefHeight="32.0" prefWidth="97.0" text="DIRECCION">
+      <TextField fx:id="nombres" layoutX="217.0" layoutY="84.0" />
+      <Label layoutX="97.0" layoutY="244.0" prefHeight="25.0" prefWidth="97.0" text="DIRECCION">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="106.0" layoutY="244.0" prefHeight="32.0" prefWidth="97.0" text="TELEFONO">
+      <Label layoutX="97.0" layoutY="200.0" prefHeight="32.0" prefWidth="97.0" text="TELEFONO">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="106.0" layoutY="162.0" prefHeight="32.0" prefWidth="97.0" text="APELLIDOS">
+      <Label layoutX="97.0" layoutY="122.0" prefHeight="32.0" prefWidth="97.0" text="APELLIDOS">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="106.0" layoutY="201.0" prefHeight="32.0" prefWidth="97.0" text="CEDULA">
+      <Label layoutX="97.0" layoutY="160.0" prefHeight="32.0" prefWidth="97.0" text="CEDULA">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Label>
-      <TextField fx:id="apellidos" layoutX="216.0" layoutY="166.0" />
-      <TextField fx:id="direccion" layoutX="216.0" layoutY="288.0" />
-      <TextField fx:id="telefono" layoutX="216.0" layoutY="248.0" />
-      <TextField fx:id="cedula" layoutX="216.0" layoutY="204.0" />
-      <Button layoutX="76.0" layoutY="353.0" mnemonicParsing="false" onAction="#registrar_clientes" prefHeight="32.0" prefWidth="120.0" text="REGISTRAR">
+      <TextField fx:id="apellidos" layoutX="217.0" layoutY="126.0" />
+      <TextField fx:id="direccion" layoutX="217.0" layoutY="246.0" />
+      <TextField fx:id="telefono" layoutX="217.0" layoutY="204.0" />
+      <TextField fx:id="cedula" layoutX="217.0" layoutY="164.0" />
+      <Button layoutX="56.0" layoutY="378.0" mnemonicParsing="false" onAction="#registrar_clientes" prefHeight="32.0" prefWidth="120.0" text="REGISTRAR">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="reestablecer" layoutX="216.0" layoutY="353.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="149.0" text="REESTABLECER">
+      <Button fx:id="reestablecer" layoutX="226.0" layoutY="378.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="149.0" text="REESTABLECER">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
@@ -60,5 +61,17 @@
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Button>
+      <Label layoutX="97.0" layoutY="314.0" prefHeight="32.0" prefWidth="97.0" text="EMPRESA">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="empresas" layoutX="217.0" layoutY="319.0" onAction="#seleccionar_empresa" prefWidth="150.0" />
+      <Label layoutX="97.0" layoutY="278.0" prefHeight="32.0" prefWidth="97.0" text="MAIL">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="mail" layoutX="217.0" layoutY="283.0" />
    </children>
 </AnchorPane>

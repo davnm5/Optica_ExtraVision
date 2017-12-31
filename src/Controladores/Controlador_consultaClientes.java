@@ -27,7 +27,7 @@ import javafx.scene.layout.AnchorPane;
  *
  * @author creditos
  */
-public class Controlador_consultas {
+public class Controlador_consultaClientes {
 
     @FXML
     private TableColumn c_nombres, c_apellidos, c_telefono, c_direccion;
@@ -50,7 +50,6 @@ public class Controlador_consultas {
 
     @FXML
     public void initialize() {
-        System.out.println("ENTRA");
         tabla = new TableView<>();
         tabla.setLayoutX(124);
         tabla.setLayoutY(160);

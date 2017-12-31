@@ -31,7 +31,8 @@ public class DB_Clientes {
             while(r.next())
             {
             Clientes d;
-            d= new Clientes(r.getString("nombre"),r.getString("apellido"),r.getString("direccion"),r.getInt("cedula"),r.getInt("telefono"));
+            d= new Clientes(r.getString("nombre"),r.getString("apellido"),r.getString("direccion"),
+                    r.getString("cedula"),r.getString("telefono"),r.getInt("Empresa_idEmpresa"),r.getString("mail"));
             arreglo.add(d);
             System.out.println("nombre:"+r.getString("nombre"));
                 
@@ -48,12 +49,14 @@ public class DB_Clientes {
       
   public static void registrar_clientes(Clientes a)
 {
-            Gestionar_Base.crearprocedimiento("{call registrar_pacientes(?,?,?,?,?)}");
+            Gestionar_Base.crearprocedimiento("{call registrar_pacientes(?,?,?,?,?,?,?)}");
             Gestionar_Base.asignarparametrosString(1,a.getNombre());
             Gestionar_Base.asignarparametrosString(2,a.getApellido());
             Gestionar_Base.asignarparametrosString(3,a.getDireccion());
-            Gestionar_Base.asignarparametrosInt(4,a.getCedula());
-            Gestionar_Base.asignarparametrosInt(5,a.getTelefono());            
+            Gestionar_Base.asignarparametrosString(4,a.getCedula());
+            Gestionar_Base.asignarparametrosString(5,a.getTelefono());  
+            Gestionar_Base.asignarparametrosInt(6,a.getIdEmpresa());
+            Gestionar_Base.asignarparametrosString(7,a.getMail());
             Gestionar_Base.ejecutarprocedimiento();
             Gestionar_Base.cerrar();
 }
