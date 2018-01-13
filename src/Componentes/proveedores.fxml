@@ -8,57 +8,63 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="proveedores" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="659.0" stylesheets="@../Media/estilo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.Controlador_ventanas">
+<AnchorPane fx:id="proveedores" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="617.0" stylesheets="@../Media/estilo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.Controlador_registroProveedor">
    <children>
       <ImageView fitHeight="50.0" fitWidth="216.0" layoutX="229.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Media/proveedores.png" />
          </image>
       </ImageView>
-      <Label layoutX="106.0" layoutY="120.0" prefHeight="32.0" prefWidth="97.0" text="NOMBRES">
+      <Label layoutX="106.0" layoutY="108.0" prefHeight="32.0" prefWidth="97.0" text="NOMBRES">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Label>
-      <TextField fx:id="nombres" layoutX="216.0" layoutY="124.0" />
-      <Label layoutX="106.0" layoutY="284.0" prefHeight="32.0" prefWidth="97.0" text="DIRECCION">
+      <TextField fx:id="nombres" layoutX="216.0" layoutY="112.0" />
+      <Label layoutX="105.0" layoutY="262.0" prefHeight="32.0" prefWidth="97.0" text="DIRECCION">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="106.0" layoutY="244.0" prefHeight="32.0" prefWidth="97.0" text="TELEFONO">
+      <Label layoutX="105.0" layoutY="226.0" prefHeight="32.0" prefWidth="97.0" text="TELEFONO">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="106.0" layoutY="162.0" prefHeight="32.0" prefWidth="97.0" text="APELLIDOS">
+      <Label layoutX="106.0" layoutY="150.0" prefHeight="32.0" prefWidth="97.0" text="APELLIDOS">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="106.0" layoutY="201.0" prefHeight="32.0" prefWidth="97.0" text="RUC">
+      <Label layoutX="106.0" layoutY="188.0" prefHeight="32.0" prefWidth="97.0" text="MAIL">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Label>
-      <TextField fx:id="apellidos" layoutX="216.0" layoutY="166.0" />
-      <TextField fx:id="direccion" layoutX="216.0" layoutY="288.0" />
-      <TextField fx:id="telefono" layoutX="216.0" layoutY="248.0" />
-      <TextField fx:id="ruc" layoutX="216.0" layoutY="204.0" />
-      <Button fx:id="registrar_proveedores" layoutX="76.0" layoutY="353.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="120.0" text="REGISTRAR">
+      <TextField fx:id="apellidos" layoutX="216.0" layoutY="154.0" />
+      <TextField fx:id="direccion" layoutX="216.0" layoutY="265.0" />
+      <TextField fx:id="telefono" layoutX="216.0" layoutY="229.0" />
+      <TextField fx:id="mail" layoutX="216.0" layoutY="192.0" />
+      <Button layoutX="81.0" layoutY="369.0" mnemonicParsing="false" onAction="#registrar_proveedores" prefHeight="32.0" prefWidth="120.0" text="REGISTRAR">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="reestablecer" layoutX="216.0" layoutY="353.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="149.0" text="REESTABLECER">
+      <Button fx:id="reestablecer" layoutX="229.0" layoutY="369.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="149.0" text="REESTABLECER">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="atras_p" layoutX="7.0" layoutY="8.0" mnemonicParsing="false" onAction="#atras_Proveedores" prefHeight="25.0" prefWidth="97.0" text="ATRÁS">
+      <Button fx:id="atras_proveedores" layoutX="7.0" layoutY="8.0" mnemonicParsing="false" onAction="#atras_proveedores" prefHeight="25.0" prefWidth="97.0" text="ATRÁS">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Button>
+      <Label layoutX="104.0" layoutY="300.0" prefHeight="32.0" prefWidth="97.0" text="COMISION">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="comision" layoutX="216.0" layoutY="305.0" />
    </children>
 </AnchorPane>

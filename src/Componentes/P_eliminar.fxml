@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="P_eliminar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="647.0" styleClass="label" stylesheets="@../Media/estilo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.Controlador_eliminacion">
+   <children>
+      <MenuBar layoutY="7.0" prefHeight="3.0" prefWidth="647.0" stylesheets="@../Media/estilo.css">
+        <menus>
+          <Menu mnemonicParsing="false" text="Clientes">
+               <items>
+                  <MenuItem fx:id="m_clientes" mnemonicParsing="false" onAction="#clientes" text="Mostrar" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Productos">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Lentes" />
+                  <MenuItem mnemonicParsing="false" text="Armazones" />
+                  <MenuItem mnemonicParsing="false" text="Lunas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Proveedores">
+               <items>
+                  <MenuItem fx:id="m_proveedores" mnemonicParsing="false" onAction="#proveedores" text="Mostrar" />
+               </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Brigadas" />
+            <Menu mnemonicParsing="false" text="Ventas" />
+            <Menu mnemonicParsing="false" text="Salir">
+               <items>
+                  <MenuItem fx:id="aceptar" mnemonicParsing="false" onAction="#salir" text="Aceptar" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutX="163.0" layoutY="401.0" mnemonicParsing="false" onAction="#eliminar_todo" prefHeight="32.0" prefWidth="108.0" text="ELIMINAR" />
+      <Button layoutX="314.0" layoutY="401.0" mnemonicParsing="false" onAction="#reestablecer" prefHeight="37.0" prefWidth="136.0" text="REESTABLECER" />
+   </children>
+</AnchorPane>

@@ -18,72 +18,25 @@ and open the template in the editor.
  */
 
 .label{
--fx-font-size:13pt;
+-fx-font-size:12pt;
 -fx-font-family:Britannic Bold;
 -fx-font-weight:bold;
 }
 
-
-#Contenedor{
-  -fx-background-image: url(fondo.jpeg);
-  -fx-background-position: center center;
-  -fx-background-repeat: stretch;
-  -fx-background-color:#000000;
-    
-    
-}
-
-
-#MENU{
--fx-background-image: url(fondo.jpeg);
-  -fx-background-position: center center;
-  -fx-background-repeat: stretch;
-  -fx-background-color:#000000;
-    
-}
-
-
 .button:hover {
     
--fx-font-size: 13pt;
--fx-font-family: Britannic Bold;
--fx-font-weight:bold;
- -fx-background: rgba(0,0,0,0);
- -fx-color: #3a7999;
- -fx-box-shadow: inset 0 0 0 3px #3a7999;
-}
-
-#regreso:hover {
-    
--fx-font-size: 13pt;
--fx-font-family: Britannic Bold;
--fx-font-weight:bold;
- -fx-background: rgba(0,0,0,0);
- -fx-color: #3a7999;
- -fx-box-shadow: inset 0 0 0 3px #3a7999;
-}
-#marcador{
--fx-font-size: 18pt;
--fx-font-family: Georgia;
--fx-font-weight:bold;
-
-}
-
-#puntajes{
--fx-font-size: 11pt;
--fx-font-family: Georgia;
--fx-font-weight:bold;
-}
-
-#mensaje{
- -fx-font-size: 20pt;
--fx-font-family: Georgia;
--fx-font-weight:bold;      
-}
-
-#Text{
 -fx-font-size: 12pt;
--fx-color: #3a7999;
--fx-font-family: Georgia;
--fx-font-weight:bold;      
+-fx-font-family: Britannic Bold;
+-fx-font-weight:bold;
+ -fx-background: rgba(0,0,0,0);
+ -fx-color: #3a7999;
+ -fx-box-shadow: inset 0 0 0 3px #3a7999;
 }
+
+#lista{
+-fx-font-size: 10pt;
+-fx-font-family: Georgia;
+-fx-font-weight:bold;
+
+}
+

@@ -1,11 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="par_Lunas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.Controlador_registroProductos">
+<AnchorPane fx:id="par_Lunas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../Media/estilo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.Controlador_registroProductos">
    <children>
-      <Button fx:id="atras" layoutX="42.0" layoutY="31.0" mnemonicParsing="false" onAction="#regresar_lunas" text="ATRAS" />
+      <ImageView fitHeight="37.0" fitWidth="163.0" layoutX="245.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Media/lunas.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="256.0" layoutY="330.0" mnemonicParsing="false" onAction="#registrar_lunas" text="REGISTRAR">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="107.0" layoutY="118.0" text="DESCRIPCION" />
+      <Label layoutX="106.0" layoutY="201.0" text="PRECIO" />
+      <TextField fx:id="descripcion" layoutX="236.0" layoutY="118.0" />
+      <TextField fx:id="precio" layoutX="236.0" layoutY="201.0" />
+      <Button layoutX="24.0" layoutY="32.0" mnemonicParsing="false" onAction="#atras_lunas" text="ATRAS">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="106.0" layoutY="239.0" prefHeight="25.0" prefWidth="95.0" text="CANTIDAD" />
+      <TextField fx:id="cantidad" layoutX="236.0" layoutY="239.0" />
+      <Label layoutX="106.0" layoutY="275.0" prefHeight="25.0" prefWidth="95.0" text="PROVEEDOR" />
+      <ComboBox fx:id="proveedores" layoutX="235.0" layoutY="275.0" onAction="#obtener_proveedores" prefWidth="150.0" />
+      <Label layoutX="107.0" layoutY="161.0" text="TIPO" />
+      <ComboBox fx:id="c_lunas" layoutX="235.0" layoutY="161.0" prefWidth="150.0" />
+      <ComboBox fx:id="c_armazones" layoutX="409.0" layoutY="69.0" prefWidth="150.0" visible="false" />
+      <TextField fx:id="marca" layoutX="385.0" layoutY="69.0" visible="false" />
    </children>
 </AnchorPane>
