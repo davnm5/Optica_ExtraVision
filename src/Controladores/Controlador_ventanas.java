@@ -1,4 +1,4 @@
-/*
+﻿/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -39,7 +39,7 @@ public class Controlador_ventanas implements Initializable {
     @FXML
     private void ingresar(ActionEvent event) throws IOException {
 
-        if (usuario.getText().equals("") && password.getText().equals("")) {
+        if (usuario.getText().equals("root") && password.getText().equals("sql")) {
 
             AnchorPane pane = FXMLLoader.load(this.getClass().getResource("/Componentes/submenu.fxml"));
             this.inicio.getChildren().setAll(pane);
