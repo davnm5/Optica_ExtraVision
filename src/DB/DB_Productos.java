@@ -37,13 +37,13 @@ public class DB_Productos {
 }
   
   public static void registrar_lunas(Lunas a) {
-        Gestionar_Base.crearprocedimiento("{call registrar_lentes(?,?,?,?,?,?)}");
+        Gestionar_Base.crearprocedimiento("{call registrar_lunas(?,?,?,?,?,?)}");
             Gestionar_Base.asignarparametrosInt(1,a.getIdLunas());
             Gestionar_Base.asignarparametrosFloat(2,a.getPrecio());
             Gestionar_Base.asignarparametrosString(3,a.getTipo());
-            Gestionar_Base.asignarparametrosInt(4,a.getCantidad());
+            Gestionar_Base.asignarparametrosInt(6,a.getCantidad());
             Gestionar_Base.asignarparametrosString(5,a.getDescripcion());  
-            Gestionar_Base.asignarparametrosInt(6,a.getIdProveedor());
+            Gestionar_Base.asignarparametrosInt(4,a.getIdProveedor());
             Gestionar_Base.ejecutarprocedimiento();
             Gestionar_Base.cerrar(); 
     }

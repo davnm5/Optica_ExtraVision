@@ -31,7 +31,7 @@ CREATE TABLE `armazon` (
   `marca` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idArmazon`),
   KEY `fk_Armazon_Proveedor1_idx` (`Proveedor_idProveedor`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `armazon` (
 
 LOCK TABLES `armazon` WRITE;
 /*!40000 ALTER TABLE `armazon` DISABLE KEYS */;
-INSERT INTO `armazon` VALUES (5,'Resistente',50.6,302,3,'Gucci'),(6,'Duraderos',150,301,2,'Ray Ban'),(7,'Flexibles',60,303,1,'Gucci'),(8,'Liviano',75.5,300,5,'Ray Ban'),(9,'a',5,300,5,'a'),(10,'ligeros',30,300,5,'gucci');
+INSERT INTO `armazon` VALUES (5,'Resistente',50.6,302,3,'Gucci'),(6,'Duraderos',150,301,2,'Ray Ban'),(7,'Flexibles',60,303,1,'Gucci'),(8,'Liviano',75.5,300,5,'Ray Ban'),(9,'a',5,300,5,'a'),(10,'ligeros',30,300,5,'gucci'),(11,'resistentes',30,301,4,'Angelina');
 /*!40000 ALTER TABLE `armazon` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -219,7 +219,7 @@ CREATE TABLE `lentes` (
   PRIMARY KEY (`idLente`),
   KEY `fk_Lente_Armazon1_idx` (`Armazon_idArmazon`),
   KEY `fk_Lente_Par_Lunas1_idx` (`Par_Lunas_idLunas`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -228,6 +228,7 @@ CREATE TABLE `lentes` (
 
 LOCK TABLES `lentes` WRITE;
 /*!40000 ALTER TABLE `lentes` DISABLE KEYS */;
+INSERT INTO `lentes` VALUES (1,50,0,0,'resistentes',2);
 /*!40000 ALTER TABLE `lentes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -313,7 +314,7 @@ CREATE TABLE `par_lunas` (
   PRIMARY KEY (`idLunas`),
   KEY `fk_Par_Lunas_Proveedor1_idx` (`Proveedor_idProveedor`),
   CONSTRAINT `fk_Par_Lunas_Proveedor1` FOREIGN KEY (`Proveedor_idProveedor`) REFERENCES `proveedor` (`idProveedor`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -322,6 +323,7 @@ CREATE TABLE `par_lunas` (
 
 LOCK TABLES `par_lunas` WRITE;
 /*!40000 ALTER TABLE `par_lunas` DISABLE KEYS */;
+INSERT INTO `par_lunas` VALUES (4,50,'Delicados',301,5,'MONOFOCALES');
 /*!40000 ALTER TABLE `par_lunas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -455,7 +457,7 @@ DELIMITER ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `obtener_lunas`()
 BEGIN
-Select descripcion,idLunas from par_lunas;
+Select descripcion,tipo from par_lunas;
     END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -595,4 +597,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-12 23:58:30
+-- Dump completed on 2018-01-14 19:10:03

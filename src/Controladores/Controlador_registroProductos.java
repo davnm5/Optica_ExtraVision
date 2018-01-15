@@ -32,13 +32,14 @@ public class Controlador_registroProductos {
     @FXML
     private AnchorPane lentes, par_Lunas,armazon;
     @FXML
-    private ComboBox proveedores,c_lunas,c_armazones;
+    private ComboBox proveedores,c_lunas,c_armazones,c_tipos;
     @FXML
     private TextField marca,tipo,descripcion, precio, cantidad;
     private ArrayList<Proveedores> datos = new ArrayList();
     private ArrayList<Lunas> data = new ArrayList();
     private ArrayList<Armazones> list = new ArrayList();
     private int idProveedor=-1,idLunas=-1,idArmazon=-1;
+    private String t;
     
     
     @FXML
@@ -79,10 +80,10 @@ public class Controlador_registroProductos {
     
     @FXML 
     private void registrar_lunas(){
-      if (!"".equals(descripcion.getText()) && !"".equals(precio.getText()) && !"".equals(cantidad.getText()) && !"".equals(marca.getText())&&idProveedor!=-1) {
+      if (!"".equals(descripcion.getText()) && !"".equals(precio.getText()) && !"".equals(cantidad.getText()) &&idProveedor!=-1&&!"".equals(t)) {
 
             Lunas nuevo;
-            nuevo = new Lunas(descripcion.getText(),Float.parseFloat(precio.getText()),Integer.parseInt(cantidad.getText()),tipo.getText(),0,idProveedor);
+            nuevo = new Lunas(descripcion.getText(),Float.parseFloat(precio.getText()),Integer.parseInt(cantidad.getText()),t,0,idProveedor);
             DB_Productos.registrar_lunas(nuevo);
             mostrar_mensaje("REGISTRO EXITOSO", "LA LUNA FUE REGISTRADO CORRECTAMENTE");
         }
@@ -112,10 +113,10 @@ public class Controlador_registroProductos {
     
 
     @FXML
-    public void initialize() {
+ public void initialize() {
         proveedores.getItems().removeAll(proveedores.getItems());
         c_lunas.getItems().removeAll(c_lunas.getItems());
-        c_lunas.getItems().addAll("MONOFOCALES","BIFOCALES","LECTURA","ANTIREFLEJO");
+        c_tipos.getItems().addAll("MONOFOCALES","BIFOCALES","LECTURA","ANTIREFLEJO","FOTOCROMATICOS","PROGRESIVOS");
         c_armazones.getItems().removeAll(c_armazones.getItems());
         datos = DB_Proveedores.obtener_Proveedores();
         for (int i = 0; i < datos.size(); i++) {
@@ -164,7 +165,12 @@ public class Controlador_registroProductos {
         
     }
     
-    
+    @FXML 
+    private void obtener_tipos(){
+        t=(String)c_tipos.getValue();
+        System.out.println(t);
+        
+    }
     
     private void mostrar_mensaje(String texto1, String texto2) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

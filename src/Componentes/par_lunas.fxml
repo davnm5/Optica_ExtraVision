@@ -35,8 +35,9 @@
       <Label layoutX="106.0" layoutY="275.0" prefHeight="25.0" prefWidth="95.0" text="PROVEEDOR" />
       <ComboBox fx:id="proveedores" layoutX="235.0" layoutY="275.0" onAction="#obtener_proveedores" prefWidth="150.0" />
       <Label layoutX="107.0" layoutY="161.0" text="TIPO" />
-      <ComboBox fx:id="c_lunas" layoutX="235.0" layoutY="161.0" prefWidth="150.0" />
+      <ComboBox fx:id="c_tipos" layoutX="235.0" layoutY="161.0" onAction="#obtener_tipos" prefWidth="150.0" />
       <ComboBox fx:id="c_armazones" layoutX="409.0" layoutY="69.0" prefWidth="150.0" visible="false" />
       <TextField fx:id="marca" layoutX="385.0" layoutY="69.0" visible="false" />
+      <ComboBox fx:id="c_lunas" layoutX="409.0" layoutY="20.0" prefWidth="150.0" visible="false" />
    </children>
 </AnchorPane>

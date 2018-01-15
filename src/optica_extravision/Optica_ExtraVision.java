@@ -27,7 +27,7 @@ public class Optica_ExtraVision extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         stage.setTitle("OPTICA EXTRA VISION");
-        stage.getIcons().add(new Image("Media/icono.png"));
+        stage.getIcons().add(new Image("Media/logo.png"));
         
         Parent root = FXMLLoader.load(getClass().getResource("/Componentes/principal.fxml"));
         Scene scene = new Scene(root);

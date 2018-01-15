@@ -38,5 +38,6 @@
       <ComboBox fx:id="proveedores" layoutX="225.0" layoutY="265.0" onAction="#obtener_proveedores" prefHeight="25.0" prefWidth="149.0" />
       <ComboBox fx:id="c_lunas" layoutX="400.0" layoutY="55.0" prefWidth="150.0" visible="false" />
       <ComboBox fx:id="c_armazones" layoutX="400.0" layoutY="151.0" prefWidth="150.0" visible="false" />
+      <ComboBox fx:id="c_tipos" layoutX="436.0" layoutY="333.0" prefWidth="150.0" visible="false" />
    </children>
 </AnchorPane>

@@ -41,14 +41,9 @@
       </Label>
       <PasswordField id="password" fx:id="password" layoutX="268.0" layoutY="230.0" />
       <TextField id="usuario" fx:id="usuario" layoutX="269.0" layoutY="182.0" />
-      <ImageView fitHeight="121.0" fitWidth="149.0" layoutX="231.0" layoutY="66.0" pickOnBounds="true" smooth="false">
+      <ImageView fitHeight="105.0" fitWidth="341.0" layoutX="148.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Media/logo.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="53.0" fitWidth="353.0" layoutX="129.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Media/titulo.png" />
          </image>
       </ImageView>
     </children>

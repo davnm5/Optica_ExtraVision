@@ -18,7 +18,7 @@ and open the template in the editor.
  */
 
 .label{
--fx-font-size:12pt;
+-fx-font-size:11pt;
 -fx-font-family:Britannic Bold;
 -fx-font-weight:bold;
 }
@@ -28,9 +28,9 @@ and open the template in the editor.
 -fx-font-size: 12pt;
 -fx-font-family: Britannic Bold;
 -fx-font-weight:bold;
- -fx-background: rgba(0,0,0,0);
- -fx-color: #3a7999;
- -fx-box-shadow: inset 0 0 0 3px #3a7999;
+-fx-background: rgba(0,0,0,0);
+-fx-color: #3a7999;
+-fx-box-shadow: inset 0 0 0 3px #3a7999;
 }
 
 #lista{
@@ -39,4 +39,10 @@ and open the template in the editor.
 -fx-font-weight:bold;
 
 }
+
+.table-view {
+-fx-table-cell-border-color:derive(-fx-base,+10%);
+-fx-table-header-border-color:derive(-fx-base,+20%);
+}
+ 
 
