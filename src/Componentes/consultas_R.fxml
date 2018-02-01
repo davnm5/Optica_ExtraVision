@@ -22,23 +22,7 @@
             <DropShadow />
          </effect>
       </Button>
-      <Button fx:id="c_proveedores" layoutX="248.0" layoutY="256.0" mnemonicParsing="false" text="PROVEEDORES">
-         <font>
-            <Font name="Britannic Bold" size="20.0" />
-         </font>
-         <effect>
-            <DropShadow />
-         </effect>
-      </Button>
-      <Button fx:id="c_ventas" layoutX="248.0" layoutY="312.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="158.0" text="VENTAS">
-         <font>
-            <Font name="Britannic Bold" size="20.0" />
-         </font>
-         <effect>
-            <DropShadow />
-         </effect>
-      </Button>
-      <Button fx:id="c_brigadas" layoutX="248.0" layoutY="365.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="158.0" text="BRIGADAS">
+      <Button layoutX="248.0" layoutY="308.0" mnemonicParsing="false" onAction="#consultar_brigadas" prefHeight="36.0" prefWidth="158.0" text="BRIGADAS">
          <font>
             <Font name="Britannic Bold" size="20.0" />
          </font>
@@ -51,7 +35,15 @@
             <Font name="Britannic Bold" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="248.0" layoutY="201.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="158.0" text="PRODUCTOS">
+      <Button layoutX="248.0" layoutY="201.0" mnemonicParsing="false" onAction="#consultar_productos" prefHeight="36.0" prefWidth="158.0" text="PRODUCTOS">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button layoutX="248.0" layoutY="256.0" mnemonicParsing="false" onAction="#consultar_proveedores" prefHeight="36.0" prefWidth="158.0" text="PROVEEDORES">
          <font>
             <Font name="Britannic Bold" size="20.0" />
          </font>

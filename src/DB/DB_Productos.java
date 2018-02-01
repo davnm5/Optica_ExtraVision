@@ -6,6 +6,7 @@
 package DB;
 
 import Entidades.Armazones;
+import Entidades.Clientes;
 import Entidades.Empresas;
 import Entidades.Lentes;
 import Entidades.Lunas;
@@ -71,7 +72,7 @@ public class DB_Productos {
             while(r.next())
             {
             Lunas d;
-            d= new Lunas(r.getString("descripcion"),r.getString("tipo"));
+            d= new Lunas(r.getInt("idLunas"),r.getString("descripcion"),r.getString("tipo"));
             arreglo.add(d);
                 
             }
@@ -95,7 +96,7 @@ public class DB_Productos {
             while(r.next())
             {
             Armazones d;
-            d= new Armazones(r.getString("marca"),r.getFloat("precio"));
+            d= new Armazones(r.getInt("idArmazon"),r.getString("marca"),r.getFloat("precio"));
             arreglo.add(d);
                 
             }
@@ -107,7 +108,63 @@ public class DB_Productos {
         Gestionar_Base.cerrar();
         return arreglo;
     }
-
+  
+  
+    public static ArrayList obtener_lentes(){
+  
+            ArrayList arreglo=new ArrayList();
+            ResultSet r;
+            Gestionar_Base.crearprocedimiento("{call obtener_lentes()}");
+            Gestionar_Base.ejecutarprocedimiento();
+            r=Gestionar_Base.obtenerprocedmiento();
+        try {
+            while(r.next())
+            {
+            Lentes d;
+            d= new Lentes(r.getInt("idLente"),r.getString("tipo"),r.getString("marca"));
+            arreglo.add(d);
+                
+            }
+            
+            r.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(DB_Clientes.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Gestionar_Base.cerrar();
+        return arreglo;
+    }
+    
+     
+    public static ArrayList obtener_lentes(String a)
+          {
+            
+            String s[]=a.split("#");
+            ArrayList<Lentes> arreglo=new ArrayList();
+            System.out.println(s[1]);
+            ResultSet r;
+            Gestionar_Base.crearprocedimiento("{call descripcion_lentes(?)}");
+            Gestionar_Base.asignarparametrosInt(1,Integer.parseInt(s[1]));
+            Gestionar_Base.ejecutarprocedimiento();
+            r=Gestionar_Base.obtenerprocedmiento();
+        try {
+            while(r.next())
+            {
+            Lentes d;
+            d= new Lentes(r.getInt("idLente"),r.getString("descripcion"),r.getFloat("precio"),r.getInt("cantidad"),r.getString("marca"),
+                    r.getString("tipo"),r.getString("descripcion_armazon"),r.getString("descripcion_lunas"));
+            arreglo.add(d);
+            System.out.println("tipo"+arreglo.get(0).getTipo());
+                
+            }
+            
+            r.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(DB_Clientes.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Gestionar_Base.cerrar();
+        return arreglo;
+    }
+  
   }
     
     

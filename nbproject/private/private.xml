@@ -3,23 +3,27 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Componentes/consulta_brigadas.fxml</file>
             <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/DB/DB_Productos.java</file>
-            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Controladores/Controlador_registroClientes.java</file>
             <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/optica_extravision/Optica_ExtraVision.java</file>
             <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Controladores/Controlador_registroProductos.java</file>
-            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Entidades/Lunas.java</file>
-            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Componentes/armazon.fxml</file>
-            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Controladores/Controlador_eliminacion.java</file>
-            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Entidades/Lentes.java</file>
-            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Componentes/lentes.fxml</file>
-            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Controladores/Controlador_consultaClientes.java</file>
+            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Controladores/Controlador_consultaProveedores.java</file>
+            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/DB/DB_Proveedores.java</file>
+            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Controladores/Controlador_registroVentas.java</file>
+            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Entidades/Brigadas.java</file>
+            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/DB/DB_Clientes.java</file>
+            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Controladores/Controlador_registroBrigadas.java</file>
+            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Entidades/Ventas.java</file>
+            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/DB/DB_Ventas.java</file>
             <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Controladores/Controlador_registroProveedor.java</file>
-            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Componentes/par_lunas.fxml</file>
-            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Entidades/Armazones.java</file>
-            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Componentes/registros.fxml</file>
+            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Media/estilo.css</file>
+            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/DB/DB_Brigadas.java</file>
+            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Controladores/Controlador_registroEmpleados.java</file>
             <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Controladores/Controlador_ventanas.java</file>
-            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Componentes/principal.fxml</file>
-            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Componentes/proveedores.fxml</file>
+            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Controladores/Controlador_ConsultaProductos.java</file>
+            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Controladores/Controlador_Web.java</file>
+            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Controladores/Controlador_consultaBrigadas.java</file>
+            <file>file:/C:/Users/creditos/Desktop/Optica_ExtraVision/src/Controladores/Browser.java</file>
         </group>
     </open-files>
 </project-private>

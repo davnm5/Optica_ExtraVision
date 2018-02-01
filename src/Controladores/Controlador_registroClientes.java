@@ -12,6 +12,7 @@ import Entidades.Empresas;
 import java.io.IOException;
 import java.util.ArrayList;
 import javafx.event.ActionEvent;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
@@ -32,14 +33,14 @@ public class Controlador_registroClientes {
     @FXML
     private ComboBox empresas;
     private ArrayList<Empresas> datos = new ArrayList();
-    private int idEmpresa;
+    private int idEmpresa=-1;
 
     @FXML
     private void registrar_clientes() {
         String a, b;
         a = cedula.getText();
         b = telefono.getText();
-        if (!"".equals(a) && !"".equals(nombres.getText()) && !"".equals(apellidos.getText()) && !"".equals(b) && !"".equals(direccion.getText()) && !"".equals(mail.getText())) {
+        if (!"".equals(a) && !"".equals(nombres.getText()) && !"".equals(apellidos.getText()) && !"".equals(b) && !"".equals(direccion.getText()) && !"".equals(mail.getText())&&idEmpresa!=-1) {
             if (a.length() == 10 && b.length() >= 7 && b.length() <= 10) {
                 Clientes nuevo = new Clientes(nombres.getText(), apellidos.getText(), direccion.getText(), a, b, idEmpresa, mail.getText());
                 DB_Clientes.registrar_clientes(nuevo);
@@ -63,7 +64,6 @@ public class Controlador_registroClientes {
     @FXML
     public void initialize() {
         empresas.getItems().removeAll(empresas.getItems());
-
         datos = DB_Empresas.obtener_Empresas();
         for (int i = 0; i < datos.size(); i++) {
             empresas.getItems().add(datos.get(i).getNombre());

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="empleados" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.Controlador_registroEmpleados">
+   <children>
+      <Label layoutX="107.0" layoutY="90.0" prefHeight="32.0" prefWidth="97.0" text="NOMBRES">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombres" layoutX="227.0" layoutY="94.0" />
+      <Label layoutX="107.0" layoutY="254.0" prefHeight="25.0" prefWidth="97.0" text="DIRECCION">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="107.0" layoutY="210.0" prefHeight="32.0" prefWidth="97.0" text="TELEFONO">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="107.0" layoutY="132.0" prefHeight="32.0" prefWidth="97.0" text="APELLIDOS">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="apellidos" layoutX="227.0" layoutY="136.0" />
+      <TextField fx:id="direccion" layoutX="227.0" layoutY="256.0" />
+      <TextField fx:id="telefono" layoutX="227.0" layoutY="214.0" />
+      <TextField fx:id="sueldo" layoutX="227.0" layoutY="174.0" />
+      <Button layoutX="66.0" layoutY="388.0" mnemonicParsing="false" onAction="#registrar_empleados" prefHeight="32.0" prefWidth="120.0" text="REGISTRAR">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="reestablecer" layoutX="236.0" layoutY="388.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="149.0" text="REESTABLECER">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="atras_empleados" layoutX="17.0" layoutY="18.0" mnemonicParsing="false" onAction="#atras_Empleados" prefHeight="25.0" prefWidth="97.0" text="ATRÁS">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="107.0" layoutY="324.0" prefHeight="32.0" prefWidth="97.0" text="TIPO">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="c_tipo" layoutX="227.0" layoutY="329.0" onAction="#seleccionar_tipo" prefWidth="150.0" />
+      <Label layoutX="107.0" layoutY="288.0" prefHeight="32.0" prefWidth="97.0" text="MAIL">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="mail" layoutX="227.0" layoutY="293.0" />
+      <Label layoutX="107.0" layoutY="170.0" prefHeight="32.0" prefWidth="97.0" text="SUELDO">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="70.0" fitWidth="209.0" layoutX="227.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Media/empleados.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -41,7 +41,7 @@ public class Controlador_registroProveedor {
                  nuevo = new Proveedores(nombres.getText(), apellidos.getText(), direccion.getText(),mail.getText(),
                        Float.parseFloat(comision.getText()),0,b);
                 DB_Proveedores.registrar_Proveedores(nuevo);
-                mostrar_mensaje("REGISTRO EXITOSO","EL PROVEEDOR FUE REGISTRADO CORRECTAMENTE");
+                mostrar_mensaje("REGISTRO EXITOSO","LA VENTA FUE REGISTRADA CORRECTAMENTE");
             } else {
                 mostrar_mensaje("ERROR","TELEFONO INCORRECTO");
             }

@@ -17,18 +17,24 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Productos">
             <items>
-              <MenuItem mnemonicParsing="false" text="Lentes" />
-                  <MenuItem mnemonicParsing="false" text="Armazones" />
-                  <MenuItem mnemonicParsing="false" text="Lunas" />
+              <MenuItem mnemonicParsing="false" onAction="#lentes" text="Lentes" />
+                  <MenuItem mnemonicParsing="false" onAction="#armazones" text="Armazones" />
+                  <MenuItem mnemonicParsing="false" onAction="#lunas" text="Lunas" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Proveedores">
                <items>
-                  <MenuItem fx:id="m_proveedores" mnemonicParsing="false" onAction="#proveedores" text="Mostrar" />
+                  <MenuItem mnemonicParsing="false" onAction="#proveedores" text="Mostrar" />
                </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="Brigadas" />
-            <Menu mnemonicParsing="false" text="Ventas" />
+            <Menu mnemonicParsing="false" text="Brigadas">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#brigadas" text="Mostrar" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Ventas">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventas" text="Mostrar" />
+               </items></Menu>
             <Menu mnemonicParsing="false" text="Salir">
                <items>
                   <MenuItem fx:id="aceptar" mnemonicParsing="false" onAction="#salir" text="Aceptar" />
@@ -36,6 +42,6 @@
         </menus>
       </MenuBar>
       <Button layoutX="163.0" layoutY="401.0" mnemonicParsing="false" onAction="#eliminar_todo" prefHeight="32.0" prefWidth="108.0" text="ELIMINAR" />
-      <Button layoutX="314.0" layoutY="401.0" mnemonicParsing="false" onAction="#reestablecer" prefHeight="37.0" prefWidth="136.0" text="REESTABLECER" />
+      <Button layoutX="314.0" layoutY="401.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="136.0" text="REESTABLECER" />
    </children>
 </AnchorPane>

@@ -1,6 +1,5 @@
 package Controladores;
 
-import DB.DB_Clientes;
 import Entidades.Clientes;
 import java.io.IOException;
 import java.net.URL;
@@ -29,12 +28,12 @@ public class Controlador_ventanas implements Initializable {
     @FXML
     private PasswordField password;
     @FXML
-    private AnchorPane inicio, submenu, registros, proveedores, consultasR, P_eliminar;
+    private AnchorPane inicio, submenu, registros, proveedores, consultasR;
 
     @FXML
     private void ingresar(ActionEvent event) throws IOException {
 
-        if (usuario.getText().equals("") && password.getText().equals("")) {
+        if (usuario.getText().equals("root") && password.getText().equals("sql")) {
 
             AnchorPane pane = FXMLLoader.load(this.getClass().getResource("/Componentes/submenu.fxml"));
             this.inicio.getChildren().setAll(pane);
@@ -61,6 +60,13 @@ public class Controlador_ventanas implements Initializable {
         AnchorPane pane = FXMLLoader.load(this.getClass().getResource("/Componentes/submenu.fxml"));
         this.consultasR.getChildren().setAll(pane);
     }
+    
+    @FXML
+    private void b_empleados(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(this.getClass().getResource("/Componentes/empleados.fxml"));
+        this.registros.getChildren().setAll(pane);
+    }
+
 
     @FXML
     private void b_proveedores(ActionEvent event) throws IOException {
@@ -139,7 +145,23 @@ public class Controlador_ventanas implements Initializable {
         AnchorPane pane = FXMLLoader.load(this.getClass().getResource("/Componentes/consulta_clientes.fxml"));
         this.consultasR.getChildren().setAll(pane);
     }
-
+    @FXML
+    private void consultar_proveedores(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(this.getClass().getResource("/Componentes/consulta_proveedores.fxml"));
+        this.consultasR.getChildren().setAll(pane);
+    }
+   
+    @FXML
+    private void consultar_productos(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(this.getClass().getResource("/Componentes/consultar_productos.fxml"));
+        this.consultasR.getChildren().setAll(pane);
+    }
+    
+     @FXML
+    private void consultar_brigadas(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(this.getClass().getResource("/Componentes/consulta_brigadas.fxml"));
+        this.consultasR.getChildren().setAll(pane);
+    }
     @FXML
     private void eliminar(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(this.getClass().getResource("/Componentes/P_eliminar.fxml"));
@@ -151,6 +173,26 @@ public class Controlador_ventanas implements Initializable {
         System.exit(0);
     }
 
+      @FXML
+    private void b_brigadas(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(this.getClass().getResource("/Componentes/brigadas.fxml"));
+        this.registros.getChildren().setAll(pane);
+    }
+    
+     @FXML
+    private void web(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(this.getClass().getResource("/Componentes/pagina_web.fxml"));
+        this.submenu.getChildren().setAll(pane);
+    }
+    
+    @FXML
+    private void b_ventas(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(this.getClass().getResource("/Componentes/ventas.fxml"));
+        this.registros.getChildren().setAll(pane);
+    }
+    
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

@@ -9,6 +9,7 @@ import Entidades.Clientes;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -49,7 +50,7 @@ public class DB_Clientes {
       
   public static void registrar_clientes(Clientes a)
 {
-            Gestionar_Base.crearprocedimiento("{call registrar_pacientes(?,?,?,?,?,?,?)}");
+            Gestionar_Base.crearprocedimiento("{call registrar_clientes(?,?,?,?,?,?,?)}");
             Gestionar_Base.asignarparametrosString(1,a.getNombre());
             Gestionar_Base.asignarparametrosString(2,a.getApellido());
             Gestionar_Base.asignarparametrosString(3,a.getDireccion());
@@ -60,6 +61,43 @@ public class DB_Clientes {
             Gestionar_Base.ejecutarprocedimiento();
             Gestionar_Base.cerrar();
 }
-    
+   
+  
+   public static void eliminar_clientes(LinkedList<Clientes> a)
+{
+    for(int i=0;i<a.size();i++){
+            Gestionar_Base.crearprocedimiento("{call eliminar_cliente(?)}");
+            Gestionar_Base.asignarparametrosString(1,a.get(i).getId());
+            Gestionar_Base.ejecutarprocedimiento();
+            Gestionar_Base.cerrar();
+    }
+}
+  
+  
+  
+      public static ArrayList obtener_clientes()
+          {
+            ArrayList arreglo=new ArrayList();
+            ResultSet r;
+            Gestionar_Base.crearprocedimiento("{call obtener_total_clientes()}");
+            Gestionar_Base.ejecutarprocedimiento();
+            r=Gestionar_Base.obtenerprocedmiento();
+        try {
+            while(r.next())
+            {
+            Clientes d;
+            d= new Clientes(r.getString("nombre"),r.getString("apellido"),r.getString("cedula"));
+            arreglo.add(d);
+            System.out.println("nombre:"+r.getString("nombre"));
+                
+            }
+            
+            r.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(DB_Clientes.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Gestionar_Base.cerrar();
+        return arreglo;
+    }
     
 }

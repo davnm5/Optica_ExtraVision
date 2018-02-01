@@ -16,11 +16,15 @@ public class Lunas {
         this.idLunas = idLunas;
         this.tipo=tipo;
     }
-    public Lunas(String descripcion,String tipo){
-    this.tipo=tipo;
-    this.descripcion=descripcion;
+ 
+
+    public Lunas(int idLunas,String descripcion, String tipo) {
+        this.descripcion = descripcion;
+        this.tipo = tipo;
+        this.idLunas = idLunas;
     }
-    
+
+
     public String getDescripcion() {
         return descripcion;
     }

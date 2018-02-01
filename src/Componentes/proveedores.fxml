@@ -55,7 +55,7 @@
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="atras_proveedores" layoutX="7.0" layoutY="8.0" mnemonicParsing="false" onAction="#atras_proveedores" prefHeight="25.0" prefWidth="97.0" text="ATRÁS">
+      <Button layoutX="7.0" layoutY="8.0" mnemonicParsing="false" onAction="#atras_proveedores" prefHeight="25.0" prefWidth="97.0" text="ATRÁS">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>

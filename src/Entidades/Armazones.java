@@ -14,7 +14,7 @@ public class Armazones {
     private String marca;
     private String descripcion;
     private float precio;
-    private int cantidad,idProveedor,idArmazon=0;
+    private int cantidad,idProveedor,idArmazon;
     
     public Armazones(String marca, String descripcion, float precio, int cantidad, int idProveedor) {
         this.marca = marca;
@@ -25,10 +25,10 @@ public class Armazones {
     }
 
 
-
-    public Armazones(String s, float f) {
-       this.marca=s;
-       this.precio=f;
+    public Armazones(int id, String s, float f) {
+        this.marca=s;
+        this.precio=f;
+        this.idArmazon=id;
     }
 
     public String getMarca() {

@@ -4,6 +4,9 @@ package DB;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+
+
 public class Gestionar_Base {
     public static Connection con;
     private static CallableStatement procedimiento;
@@ -137,6 +140,28 @@ public static void asignarparametrosFloat(int posicion,float argumento)
         }
     
 }
+
+
+public static void asignarparametrosTime(int posicion,Time argumento)
+{
+        try {
+            procedimiento.setTime(posicion, argumento);
+        } catch (SQLException ex) {
+            Logger.getLogger(Gestionar_Base.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+}
+   
+public static void asignarparametrosDate(int posicion,Date argumento)
+{
+        try {
+            procedimiento.setDate(posicion, argumento);
+        } catch (SQLException ex) {
+            Logger.getLogger(Gestionar_Base.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+}
+
 
 public static ResultSet obtenerprocedmiento(){ 
     ResultSet resultado=null;

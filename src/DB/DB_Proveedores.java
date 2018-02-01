@@ -6,11 +6,13 @@
 package DB;
 
 import Entidades.Armazones;
+import Entidades.Clientes;
 import Entidades.Empresas;
 import Entidades.Proveedores;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -60,5 +62,14 @@ public class DB_Proveedores {
 }
     
     
+   public static void eliminar_proveedores(LinkedList<Proveedores> a)
+{
+    for(int i=0;i<a.size();i++){
+            Gestionar_Base.crearprocedimiento("{call eliminar_proveedor(?)}");
+            Gestionar_Base.asignarparametrosInt(1,a.get(i).getIdProveedor());
+            Gestionar_Base.ejecutarprocedimiento();
+            Gestionar_Base.cerrar();
+    }
+}
     
 }

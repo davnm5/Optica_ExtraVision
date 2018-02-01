@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="registros" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="639.0" stylesheets="@../Media/estilo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.Controlador_ventanas">
+<AnchorPane fx:id="registros" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="626.0" stylesheets="@../Media/estilo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.Controlador_ventanas">
    <children>
       <Button id="clientes" fx:id="b_clientes" layoutX="243.0" layoutY="73.0" mnemonicParsing="false" onAction="#b_clientes" prefHeight="37.0" prefWidth="154.0" text="CLIENTES">
          <font>
@@ -14,21 +14,14 @@
          <effect>
             <DropShadow />
          </effect></Button>
-      <Button id="productos" fx:id="productos" layoutX="243.0" layoutY="186.0" mnemonicParsing="false" onAction="#b_productos" prefHeight="37.0" prefWidth="154.0" text="PRODUCTOS">
+      <Button layoutX="243.0" layoutY="245.0" mnemonicParsing="false" onAction="#b_ventas" prefHeight="37.0" prefWidth="154.0" text="VENTAS">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
          <effect>
             <DropShadow />
          </effect></Button>
-      <Button fx:id="ventas" layoutX="243.0" layoutY="245.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="154.0" text="VENTAS">
-         <font>
-            <Font name="Britannic Bold" size="17.0" />
-         </font>
-         <effect>
-            <DropShadow />
-         </effect></Button>
-      <Button fx:id="brigadas" layoutX="243.0" layoutY="305.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="154.0" text="BRIGADAS">
+      <Button layoutX="243.0" layoutY="305.0" mnemonicParsing="false" onAction="#b_brigadas" prefHeight="37.0" prefWidth="154.0" text="BRIGADAS">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>
@@ -43,6 +36,22 @@
             <DropShadow />
          </effect></Button>
       <Button id="clientes" fx:id="b_proveedores" layoutX="243.0" layoutY="128.0" mnemonicParsing="false" onAction="#b_proveedores" prefHeight="37.0" prefWidth="154.0" text="PROVEEDORES">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="productos" layoutX="243.0" layoutY="186.0" mnemonicParsing="false" onAction="#b_productos" prefHeight="37.0" prefWidth="154.0" text="PRODUCTOS">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button id="clientes" layoutX="243.0" layoutY="358.0" mnemonicParsing="false" onAction="#b_empleados" prefHeight="37.0" prefWidth="154.0" text="EMPLEADOS">
          <font>
             <Font name="Britannic Bold" size="17.0" />
          </font>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="proveedores_consulta" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.Controlador_consultaProveedores">
+   <children>
+      <ImageView fitHeight="56.0" fitWidth="244.0" layoutX="203.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Media/proveedores.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="c_proveedores" layoutX="226.0" layoutY="101.0" onAction="#cargar_proveedores" prefWidth="150.0" promptText="ELIJA UN PROVEEDOR" />
+      <Label layoutX="116.0" layoutY="137.0" prefHeight="32.0" prefWidth="97.0" text="NOMBRES">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombres" layoutX="226.0" layoutY="139.0" />
+      <Label layoutX="115.0" layoutY="287.0" prefHeight="32.0" prefWidth="97.0" text="DIRECCION">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="115.0" layoutY="251.0" prefHeight="32.0" prefWidth="97.0" text="TELEFONO">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="116.0" layoutY="175.0" prefHeight="32.0" prefWidth="97.0" text="APELLIDOS">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="116.0" layoutY="213.0" prefHeight="32.0" prefWidth="97.0" text="MAIL">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="apellidos" layoutX="226.0" layoutY="179.0" />
+      <TextField fx:id="direccion" layoutX="226.0" layoutY="290.0" />
+      <TextField fx:id="telefono" layoutX="226.0" layoutY="254.0" />
+      <TextField fx:id="mail" layoutX="226.0" layoutY="217.0" />
+      <Label layoutX="114.0" layoutY="325.0" prefHeight="32.0" prefWidth="97.0" text="COMISION">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="comision" layoutX="226.0" layoutY="330.0" />
+      <Label layoutX="114.0" layoutY="98.0" prefHeight="32.0" prefWidth="97.0" text="PROVEEDOR">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="17.0" layoutY="18.0" mnemonicParsing="false" onAction="#atras_proveedores" prefHeight="25.0" prefWidth="97.0" text="ATRÁS">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -20,7 +20,8 @@ public class Clientes {
   private SimpleStringProperty telefono;
   private SimpleStringProperty cedula;
   private int idEmpresa;
-  private String mail;
+  private String mail,nombre_c,apellido_c,id;
+  
   
   public Clientes(String a,String b,String c ,String d,String e,int id,String mail){
   this.nombre=new SimpleStringProperty(a);
@@ -31,6 +32,38 @@ public class Clientes {
   this.idEmpresa=id;
   this.mail=mail;
   }  
+
+    public Clientes(String nombre, String apellido,String cedula) {
+        this.nombre_c = nombre;
+        this.apellido_c = apellido;
+        this.id = cedula;
+    }
+
+    public String getNombre_c() {
+        return nombre_c;
+    }
+
+    public void setNombre_c(String nombre_c) {
+        this.nombre_c = nombre_c;
+    }
+
+    public String getApellido_c() {
+        return apellido_c;
+    }
+
+    public void setApellido_c(String apellido_c) {
+        this.apellido_c = apellido_c;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+
      public int getIdEmpresa(){
      return this.idEmpresa;
      } 

@@ -70,6 +70,7 @@ public class Controlador_registroProductos {
 
             DB_Productos.registrar_armazones(nuevo);
             mostrar_mensaje("REGISTRO EXITOSO", "EL ARMAZON FUE REGISTRADO CORRECTAMENTE");
+            limpiar();
         }
         else {
             mostrar_mensaje("CAMPOS VACIOS","DEBE COMPLETAR LOS CAMPOS OBLIGATORIOS");
@@ -86,6 +87,7 @@ public class Controlador_registroProductos {
             nuevo = new Lunas(descripcion.getText(),Float.parseFloat(precio.getText()),Integer.parseInt(cantidad.getText()),t,0,idProveedor);
             DB_Productos.registrar_lunas(nuevo);
             mostrar_mensaje("REGISTRO EXITOSO", "LA LUNA FUE REGISTRADO CORRECTAMENTE");
+            limpiar();
         }
         else {
             mostrar_mensaje("CAMPOS VACIOS","DEBE COMPLETAR LOS CAMPOS OBLIGATORIOS");
@@ -104,6 +106,8 @@ public class Controlador_registroProductos {
 
             DB_Productos.registrar_lentes(nuevo);
             mostrar_mensaje("REGISTRO EXITOSO", "EL LENTE FUE REGISTRADO CORRECTAMENTE");
+            limpiar();
+            
         }
         else {
             mostrar_mensaje("CAMPOS VACIOS","DEBE COMPLETAR LOS CAMPOS OBLIGATORIOS");
@@ -111,10 +115,11 @@ public class Controlador_registroProductos {
     }
     
     
+    
 
     @FXML
  public void initialize() {
-        proveedores.getItems().removeAll(proveedores.getItems());
+proveedores.getItems().removeAll(proveedores.getItems());
         c_lunas.getItems().removeAll(c_lunas.getItems());
         c_tipos.getItems().addAll("MONOFOCALES","BIFOCALES","LECTURA","ANTIREFLEJO","FOTOCROMATICOS","PROGRESIVOS");
         c_armazones.getItems().removeAll(c_armazones.getItems());
@@ -124,16 +129,17 @@ public class Controlador_registroProductos {
         }
         data=DB_Productos.obtener_lunas();
         for (int i = 0; i < data.size(); i++) {
-            c_lunas.getItems().add(data.get(i).getTipo()+ " " + data.get(i).getDescripcion());
+            c_lunas.getItems().add(data.get(i).getTipo()+ "- " + data.get(i).getDescripcion());
         }
         
         list=DB_Productos.obtener_armazones();
         for (int i = 0; i < list.size(); i++) {
-            c_armazones.getItems().add(list.get(i).getMarca()+" "+list.get(i).getPrecio());
-        }
-        
-        
+            c_armazones.getItems().add(list.get(i).getMarca()+"- "+list.get(i).getPrecio()+"$");
+        } 
+    
     }
+ 
+
 
     @FXML
     private void obtener_proveedores() {
@@ -148,8 +154,9 @@ public class Controlador_registroProductos {
    @FXML
     private void obtener_lunas(){
         for (int i = 0; i < data.size(); i++) {
-            if (c_lunas.getValue().equals(data.get(i).getTipo()+" "+data.get(i).getDescripcion())) {
+            if (c_lunas.getValue().equals(data.get(i).getTipo()+"- "+data.get(i).getDescripcion())) {
                  idLunas= data.get(i).getIdLunas();
+                 System.out.println("id Lunas:"+idLunas);
             }
         }
         
@@ -158,8 +165,9 @@ public class Controlador_registroProductos {
     @FXML
     private void obtener_armazones(){
         for (int i = 0; i < list.size(); i++) {
-            if (c_armazones.getValue().equals(list.get(i).getMarca()+" "+list.get(i).getPrecio())) {
+            if (c_armazones.getValue().equals(list.get(i).getMarca()+"- "+list.get(i).getPrecio()+"$")) {
                  idArmazon= list.get(i).getIdArmazon();
+                 System.out.println("id Armazon: "+idArmazon);
             }
         }
         
@@ -171,6 +179,7 @@ public class Controlador_registroProductos {
         System.out.println(t);
         
     }
+   
     
     private void mostrar_mensaje(String texto1, String texto2) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -180,5 +189,13 @@ public class Controlador_registroProductos {
         alert.showAndWait();
 
     }
+    
+    private void limpiar()
+    {
+    descripcion.setText("");
+    marca.setText("");
+    precio.setText("");
+    cantidad.setText("");
+    }    
 
 }

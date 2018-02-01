@@ -21,14 +21,7 @@
          <effect>
             <DropShadow />
          </effect></Button>
-      <Button fx:id="diagnosticos" layoutX="254.0" layoutY="218.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="160.0" text="DIAGNOSTICAR">
-         <font>
-            <Font name="Britannic Bold" size="20.0" />
-         </font>
-         <effect>
-            <DropShadow />
-         </effect></Button>
-      <Button fx:id="reportes" layoutX="254.0" layoutY="276.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="160.0" text="REPORTES">
+      <Button fx:id="reportes" layoutX="254.0" layoutY="224.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="160.0" text="REPORTES">
          <font>
             <Font name="Britannic Bold" size="20.0" />
          </font>
@@ -42,7 +35,15 @@
          <effect>
             <DropShadow />
          </effect></Button>
-      <Button layoutX="254.0" layoutY="332.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="36.0" prefWidth="160.0" text="ELIMINAR">
+      <Button layoutX="254.0" layoutY="282.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="36.0" prefWidth="160.0" text="ELIMINAR">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button layoutX="256.0" layoutY="338.0" mnemonicParsing="false" onAction="#web" prefHeight="36.0" prefWidth="160.0" text="SITIO WEB">
          <font>
             <Font name="Britannic Bold" size="20.0" />
          </font>
