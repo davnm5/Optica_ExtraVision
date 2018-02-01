@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 pasos para instalar:
 ejecutar el script optica.sql
 luego git clone https://github.com/davnm5/Optica_ExtraVision
-=======
 #Nombre: José David Neira Martrus
 
 La base de datos se encuentra en la carpeta Modelo-Script
->>>>>>> 7e26f24e4c5c4cf3e0f3a04996a1e6d43b0082e4
 Para ejecutar se recomienda primero hacer clean and build. 
 
 Ingreso:
