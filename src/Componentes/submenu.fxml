@@ -21,13 +21,6 @@
          <effect>
             <DropShadow />
          </effect></Button>
-      <Button fx:id="reportes" layoutX="254.0" layoutY="224.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="160.0" text="REPORTES">
-         <font>
-            <Font name="Britannic Bold" size="20.0" />
-         </font>
-         <effect>
-            <DropShadow />
-         </effect></Button>
       <Button fx:id="regresar" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#regresar" text="Cerrar Sesion">
          <font>
             <Font name="Britannic Bold" size="20.0" />
@@ -35,7 +28,7 @@
          <effect>
             <DropShadow />
          </effect></Button>
-      <Button layoutX="254.0" layoutY="282.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="36.0" prefWidth="160.0" text="ELIMINAR">
+      <Button layoutX="254.0" layoutY="215.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="36.0" prefWidth="160.0" text="ELIMINAR">
          <font>
             <Font name="Britannic Bold" size="20.0" />
          </font>
@@ -43,7 +36,7 @@
             <DropShadow />
          </effect>
       </Button>
-      <Button layoutX="256.0" layoutY="338.0" mnemonicParsing="false" onAction="#web" prefHeight="36.0" prefWidth="160.0" text="SITIO WEB">
+      <Button layoutX="256.0" layoutY="268.0" mnemonicParsing="false" onAction="#web" prefHeight="36.0" prefWidth="160.0" text="SITIO WEB">
          <font>
             <Font name="Britannic Bold" size="20.0" />
          </font>
