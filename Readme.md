@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 pasos para instalar:
 ejecutar el script optica.sql
 luego git clone https://github.com/davnm5/Optica_ExtraVision
+=======
+#Nombre: JosÃ© David Neira Martrus
+
+La base de datos se encuentra en la carpeta Modelo-Script
+>>>>>>> 7e26f24e4c5c4cf3e0f3a04996a1e6d43b0082e4
 Para ejecutar se recomienda primero hacer clean and build. 
 
 Ingreso:
@@ -8,7 +14,7 @@ Ingreso:
 usuario>> root
 clave>> sql
 
-Para el Registro de clientes se debe cumplir con numero de cedula de 10 dígitos y telefono entre [7,10] dígitos. 
+Para el Registro de clientes se debe cumplir con numero de cedula de 10 dÃ­gitos y telefono entre [7,10] dÃ­gitos. 
 Para las consultas es necesario elegir la empresa a la que pertenece el cliente.
 Para el registro de Armazones se debe elegir el proveedor. 
 Para el registro de Lunas se debe especificar el tipo y el proveedor
