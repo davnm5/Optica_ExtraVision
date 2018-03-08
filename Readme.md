@@ -1,7 +1,5 @@
 Integrantes:
 * José David Neira Martrus
-* Luis Fernando Montenegro
-* Lenin Homero Castillo
 
 * Pasos para instalar:
 ```
